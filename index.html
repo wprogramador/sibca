@@ -151,6 +151,12 @@
   </script>
   
   <style>
+    /* Reset y ajustes globales */
+    body {
+      overflow-x: hidden;
+      padding-bottom: 5rem; /* Espacio para el botón flotante en móviles */
+    }
+    
     /* Custom Scrollbar */
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: #0f172a; }
@@ -238,9 +244,21 @@
       100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
     }
     
-    /* Mobile Menu */
+    /* Mobile Menu corregido */
     .mobile-menu {
-      transform: translateX(100%);
+      position: fixed;
+      top: 0;
+      right: 1rem;
+      width: calc(100% - 2rem);
+      max-width: 320px;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 60;
+      padding: 1.5rem;
+      transform: translateX(calc(100% + 1rem));
       transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .mobile-menu.open {
@@ -315,7 +333,7 @@
   </style>
 </head>
 
-<body class="font-sans text-slate-300 bg-slate-950 antialiased overflow-x-hidden selection:bg-teal-500/30 selection:text-teal-200">
+<body class="font-sans text-slate-300 bg-slate-950 antialiased selection:bg-teal-500/30 selection:text-teal-200">
 
   <!-- Navigation -->
   <nav id="navbar" class="fixed w-full z-50 transition-all duration-500" aria-label="Navegación principal">
@@ -376,8 +394,8 @@
       </div>
     </div>
     
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-72 max-w-[80vw] h-full bg-slate-900/95 backdrop-blur-xl border-l border-slate-800 z-50 p-6 md:hidden">
+    <!-- Mobile Menu (corregido) -->
+    <div id="mobileMenu" class="mobile-menu md:hidden">
       <button id="closeMenu" class="absolute top-6 right-6 text-slate-400 hover:text-white transition-colors" aria-label="Cerrar menú">
         <i class="fas fa-times text-2xl"></i>
       </button>
@@ -888,8 +906,6 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  
   <!-- WhatsApp Contact Form -->
   <section id="cotizar" class="py-12 md:py-24 relative">
     <div class="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-slate-950"></div>
@@ -991,7 +1007,8 @@
     </div>
   </section>
 
-<section id="contacto" class="py-12 md:py-24 relative">
+  <!-- Contact Section -->
+  <section id="contacto" class="py-12 md:py-24 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 reveal">
         <span class="text-teal-400 font-semibold text-sm uppercase tracking-[0.2em]">Contacto</span>
@@ -1129,9 +1146,9 @@
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Button -->
+  <!-- Floating WhatsApp Button (corregido) -->
   <a href="https://wa.me/584121764166" target="_blank" rel="noopener noreferrer" 
-     class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 bg-green-500 hover:bg-green-400 text-white w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-2xl shadow-green-900/40 flex items-center justify-center transition-all hover:scale-110 hover:shadow-green-500/30 group magnetic-btn" 
+     class="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-400 text-white w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-2xl shadow-green-900/40 flex items-center justify-center transition-all hover:scale-110 hover:shadow-green-500/30 group magnetic-btn" 
      style="animation: bounce-slow 3s infinite;"
      aria-label="Contactar por WhatsApp">
     <i class="fab fa-whatsapp text-xl sm:text-2xl group-hover:rotate-12 transition-transform"></i>
