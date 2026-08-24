@@ -355,6 +355,10 @@
             Contacto
             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
+          <a href="#cotizar" class="text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors relative group">
+            Cotizar
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
+          </a>
           <a href="https://wa.me/584121764166" target="_blank" rel="noopener noreferrer" class="btn-shine bg-teal-600 hover:bg-teal-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-teal-900/30 flex items-center gap-2 magnetic-btn hover:shadow-teal-500/40">
             <i class="fab fa-whatsapp text-lg"></i>
             Cotizar
@@ -383,6 +387,7 @@
         <a href="#nosotros" class="text-lg font-medium text-white hover:text-teal-400 transition-colors mobile-link py-3 px-4 rounded-xl hover:bg-white/5">Nosotros</a>
         <a href="#ubicacion" class="text-lg font-medium text-white hover:text-teal-400 transition-colors mobile-link py-3 px-4 rounded-xl hover:bg-white/5">Ubicación</a>
         <a href="#contacto" class="text-lg font-medium text-white hover:text-teal-400 transition-colors mobile-link py-3 px-4 rounded-xl hover:bg-white/5">Contacto</a>
+        <a href="#cotizar" class="text-lg font-medium text-white hover:text-teal-400 transition-colors mobile-link py-3 px-4 rounded-xl hover:bg-white/5">Cotizar</a>
         <a href="https://wa.me/584121764166" target="_blank" rel="noopener noreferrer" class="mt-6 bg-teal-600 hover:bg-teal-500 text-white px-6 py-4 rounded-2xl text-center font-semibold flex items-center justify-center gap-3 transition-all shadow-lg shadow-teal-900/30">
           <i class="fab fa-whatsapp text-xl"></i>
           Escribir por WhatsApp
@@ -670,15 +675,15 @@
               </div>
               
               <!-- Floating Badges -->
-              <div class="absolute top-4 right-4 glass px-4 py-2 rounded-full border border-teal-500/20 animate-pulse-slow flex items-center gap-2">
+              <div class="absolute top-2 sm:top-4 right-2 sm:right-4 glass px-2 sm:px-4 py-1.5 sm:py-2 rounded-full border border-teal-500/20 animate-pulse-slow flex items-center gap-1.5 sm:gap-2 z-20">
                 <span class="relative flex h-2 w-2">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
                   <span class="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
                 </span>
-                <span class="text-xs text-teal-300 font-medium">Disponible</span>
+                <span class="text-[10px] sm:text-xs text-teal-300 font-medium whitespace-nowrap">Disponible</span>
               </div>
-              <div class="absolute bottom-4 left-4 glass px-4 py-2 rounded-full border border-teal-500/20">
-                <span class="text-xs text-slate-300 font-medium"><i class="fas fa-map-marker-alt mr-1.5 text-teal-400"></i>Venezuela</span>
+              <div class="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 glass px-2 sm:px-4 py-1.5 sm:py-2 rounded-full border border-teal-500/20 z-20">
+                <span class="text-[10px] sm:text-xs text-slate-300 font-medium whitespace-nowrap"><i class="fas fa-map-marker-alt mr-1 text-teal-400"></i>Maracay, Aragua</span>
               </div>
             </div>
           </div>
@@ -769,11 +774,14 @@
         <div class="lg:col-span-3 reveal" style="transition-delay: 0.15s;">
           <div class="map-container h-full min-h-[300px] sm:min-h-[400px] glass border border-slate-800/50">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.0!2d-67.6066!3d10.2442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDE0JzM5LjEiTiA2N8KwMzYnMjMuOCJX!5e0!3m2!1ses!2sve!4v1!5m2!1ses!2sve" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125629.71297147918!2d-67.68736187708603!3d10.267342431984357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e803c989377fe87%3A0xb5ff524dadae5b74!2sMaracay%2C%20Aragua!5e0!3m2!1ses-419!2sve!4v1787583235963!5m2!1ses-419!2sve"
+              width="100%" 
+              height="100%" 
+              style="border:0; filter: grayscale(100%) invert(92%) contrast(83%);" 
               allowfullscreen="" 
               loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Ubicación de SIBCA en Sector San Rafael, calle Bolívar #45, Maracay, Aragua, Venezuela">
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="Mapa de ubicación SIBCA en Maracay, Aragua, Venezuela">
             </iframe>
           </div>
         </div>
@@ -881,7 +889,109 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contacto" class="py-12 md:py-24 relative">
+  
+  <!-- WhatsApp Contact Form -->
+  <section id="cotizar" class="py-12 md:py-24 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-slate-950"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-500/5 rounded-full blur-[120px]"></div>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <span class="text-teal-400 font-semibold text-sm uppercase tracking-[0.2em]">Cotización Rápida</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-4 mb-4 leading-tight">
+          Solicita tu <span class="gradient-text">presupuesto gratis</span>
+        </h2>
+        <p class="text-slate-300 max-w-xl mx-auto">
+          Completa el formulario y te contactaremos por WhatsApp con una cotización personalizada para tu proyecto en Maracay o cualquier parte de Venezuela.
+        </p>
+      </div>
+
+      <div class="glass rounded-3xl p-6 sm:p-10 border border-slate-800/50 reveal">
+        <form id="whatsappForm" onsubmit="sendWhatsApp(event)" class="space-y-6">
+          <div class="grid sm:grid-cols-2 gap-6">
+            <!-- Nombre -->
+            <div class="space-y-2">
+              <label for="nombre" class="block text-sm font-medium text-slate-300">Nombre y Apellido <span class="text-red-400">*</span></label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                  <i class="fas fa-user text-slate-500 text-sm"></i>
+                </div>
+                <input 
+                  type="text" 
+                  id="nombre" 
+                  name="nombre" 
+                  required
+                  placeholder="Ej: Juan Pérez"
+                  class="w-full bg-slate-900/50 border border-slate-700 rounded-xl pl-10 pr-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500/30 transition-all"
+                >
+              </div>
+            </div>
+
+            <!-- Servicio -->
+            <div class="space-y-2">
+              <label for="servicio" class="block text-sm font-medium text-slate-300">Servicio de interés <span class="text-red-400">*</span></label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                  <i class="fas fa-tools text-slate-500 text-sm"></i>
+                </div>
+                <select 
+                  id="servicio" 
+                  name="servicio" 
+                  required
+                  class="w-full bg-slate-900/50 border border-slate-700 rounded-xl pl-10 pr-4 py-3 text-white focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500/30 transition-all appearance-none cursor-pointer"
+                >
+                  <option value="" disabled selected>Selecciona un servicio</option>
+                  <option value="Cámaras de Vigilancia">📹 Cámaras de Vigilancia</option>
+                  <option value="Sistemas de Alarmas">🔔 Sistemas de Alarmas</option>
+                  <option value="Cercos Eléctricos">⚡ Cercos Eléctricos</option>
+                  <option value="Sistemas Contra Incendios">🧯 Sistemas Contra Incendios</option>
+                  <option value="Controles de Acceso">🆔 Controles de Acceso</option>
+                  <option value="Inversores y Baterías Litio">🔋 Inversores & Baterías Litio</option>
+                  <option value="Otro servicio">🛠️ Otro servicio</option>
+                </select>
+                <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+                  <i class="fas fa-chevron-down text-slate-500 text-xs"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mensaje -->
+          <div class="space-y-2">
+            <label for="mensaje" class="block text-sm font-medium text-slate-300">Mensaje <span class="text-red-400">*</span></label>
+            <div class="relative">
+              <div class="absolute top-3.5 left-4 flex items-start pointer-events-none">
+                <i class="fas fa-comment-alt text-slate-500 text-sm"></i>
+              </div>
+              <textarea 
+                id="mensaje" 
+                name="mensaje" 
+                rows="4" 
+                required
+                placeholder="Cuéntanos los detalles de tu proyecto: tipo de propiedad, tamaño aproximado, ubicación en Maracay, etc."
+                class="w-full bg-slate-900/50 border border-slate-700 rounded-xl pl-10 pr-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500/30 transition-all resize-none"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button 
+            type="submit" 
+            class="btn-shine w-full bg-green-600 hover:bg-green-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl shadow-green-900/30 flex items-center justify-center gap-3 magnetic-btn hover:shadow-green-500/20"
+          >
+            <i class="fab fa-whatsapp text-2xl"></i>
+            Enviar por WhatsApp
+          </button>
+
+          <p class="text-center text-xs text-slate-500 mt-4">
+            <i class="fas fa-lock mr-1"></i> Tus datos son confidenciales. Te responderemos en minutos.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+<section id="contacto" class="py-12 md:py-24 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 reveal">
         <span class="text-teal-400 font-semibold text-sm uppercase tracking-[0.2em]">Contacto</span>
@@ -1176,6 +1286,39 @@
         chevron.classList.add('rotated');
       }
     }
+
+    // WhatsApp Form Submission
+    function sendWhatsApp(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const servicio = document.getElementById('servicio').value;
+      const mensaje = document.getElementById('mensaje').value.trim();
+
+      if (!nombre || !servicio || !mensaje) {
+        alert('Por favor completa todos los campos obligatorios.');
+        return;
+      }
+
+      const text = encodeURIComponent(
+        `¡Hola SIBCA! 👋
+
+` +
+        `Mi nombre es: *${nombre}*
+` +
+        `Servicio de interés: *${servicio}*
+
+` +
+        `Mensaje:
+${mensaje}
+
+` +
+        `Quisiera recibir una cotización. Gracias.`
+      );
+
+      const url = `https://wa.me/584121764166?text=${text}`;
+      window.open(url, '_blank');
+    }
+
   </script>
 </body>
 </html>
